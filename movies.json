@@ -1,0 +1,16 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "name": "Joker",
+      "director": "Todd Phillips",
+      "rating": 8.7
+    },
+    {
+      "id": 2,
+      "name": "Gemini Man",
+      "director": "Ang Lee",
+      "rating": 6.0
+    }
+  ]
+}

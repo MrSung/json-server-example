@@ -1,0 +1,16 @@
+{
+  "fruits": [
+    {
+      "id": 1,
+      "name": "Apple",
+      "cool": "Japan",
+      "rating": 8.6
+    },
+    {
+      "id": 2,
+      "name": "Banana",
+      "cool": "Philippines",
+      "rating": 8.8
+    }
+  ]
+}
