@@ -66,6 +66,32 @@ getMoviesPromise()
   .then(getFruits2)
   .then(fruits => debug('Fruit names with promises:', fruits))
 
+// With `Promise.all()`
+function getFruitsPromise () {
+  return new Promise((resolve, reject) => {
+    return fetch('http://localhost:3000/fruits')
+      .then(res => res.json())
+      .then(json => {
+        const fruitNames = getFruitsNames(json.fruits)
+        resolve(fruitNames)
+      })
+      .catch(error => {
+        debug(error)
+      })
+  })
+}
+
+const promises = [
+  getMoviesPromise(),
+  getFruitsPromise()
+]
+const combinedPromises = Promise.all(promises)
+
+combinedPromises.then(outcomes => {
+  debug('1st out come with Promise.all():', outcomes[0])
+  debug('2nd out come with Promise.all():', outcomes[1])
+})
+
 // With async/await
 async function getEverything () {
   const moviesJson = await fetch('http://localhost:3000/movies')
